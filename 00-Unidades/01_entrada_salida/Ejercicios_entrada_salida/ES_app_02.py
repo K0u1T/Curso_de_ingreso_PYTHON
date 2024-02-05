@@ -29,7 +29,6 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         
         dato_ingresado = prompt(title = "UTN" , prompt = "Ingrese un dato")
-        
         alert("UTN" , dato_ingresado)
         
     
