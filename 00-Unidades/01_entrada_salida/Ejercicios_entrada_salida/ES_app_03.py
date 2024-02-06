@@ -32,11 +32,13 @@ class App(customtkinter.CTk):
         self.btn_mostrar = customtkinter.CTkButton(master=self, text="Mostrar", command=self.btn_mostrar_on_click)
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
-
+    #"\0" fin de cadena
+    #"\t"
     def btn_mostrar_on_click(self):
         nombre_ingresado = self.txt_nombre.get()
-
-        alert(None, f'El nombre ingresado es: {nombre_ingresado}')
+        mensaje = f'Hola senor {nombre_ingresado}'
+        #alert(None, f'El nombre ingresado es: {nombre_ingresado}')
+        alert(None, mensaje)
                 
     
 if __name__ == "__main__":
