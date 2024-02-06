@@ -34,7 +34,9 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        nombre_ingresado = prompt(title = "Ingreso" , prompt = nombre)
+        alert(title = "Dato" , message = nombre_ingresado)
+        nombre_ingresado = self.txt_ingreso.get()
                 
     
 if __name__ == "__main__":

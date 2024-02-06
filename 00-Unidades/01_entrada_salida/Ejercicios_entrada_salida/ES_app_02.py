@@ -27,9 +27,19 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        primer_dato_ingresado = prompt(None , 'Ingrese un dato')
+        segundo_dato_ingresado = prompt(None, 'Ingrese otro dato')
+        mesaje= None
+        mensaje = f"El dato que se ingreso es: {primer_dato_ingresado}, y el segundo dato es {segundo_dato_ingresado}"
+        alert('Ejercicio 02' , mensaje)
+    
         
-        dato_ingresado = prompt(title = "UTN" , prompt = "Ingrese un dato")
-        alert("UTN" , dato_ingresado)
+        
+        # EJEMPLOS DE CONCATENACION
+        # alert('Ejercicio 02' , 'El dato ingresado es -> ' + dato_ingresado)
+        # alert('Ejercicio 02' , f"el dato que se ingreso es: {dato_ingresado}"")
+        
+        # alert('Ejercicio 02', 'El primer dato ingresados es: {0}, el segundo dato ingresado es: {1}', format(dato1, segundo_dato_ingresado))
         
     
 if __name__ == "__main__":
