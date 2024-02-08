@@ -40,7 +40,21 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        primer_numero = self.txt_operador_a.get()
+        segundo_numero = self.txt_operador_b.get()
+
+        primer_numero = int(self.txt_operador_a.get())
+        segundo_numero = int(self.txt_operador_b.get())
+
+        operacion_division = primer_numero // segundo_numero
+        resto_operacion = primer_numero % segundo_numero
+
+
+        alert(None , f"El resto de la division entre {operacion_division} es: " , resto_operacion)
+        
+        #operador modulo o resto -> %
+        #resto = 4 % 2
+       # print(resto)
         
         
     

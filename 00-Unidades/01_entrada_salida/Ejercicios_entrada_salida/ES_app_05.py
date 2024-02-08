@@ -41,11 +41,13 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
 
-        nombre = self.txt_nombre.get()
-        edad = self.txt_edad.get()
-        mensaje = f"Su nombre es: {nombre}, y su edad es {edad}"
+        nombre_ingresado = self.txt_nombre.get()
+        edad_ingresada = self.txt_edad.get()
+        mensaje_final_concatenado = "Usted se llama: " + nombre_ingresado + " y su edad es: " + edad_ingresada
+        #mensaje_final_string_format = "Mi nombre es {0} y mi edad es {1}" .format(nombre_ingresado , edad_ingresada)
+        #mensaje_final_string_interpolado = f"Su nombre es: {nombre_ingresado}, y su edad es {edad_ingresada}"
         
-        alert('Ejercicio 05' , mensaje)
+        alert('Ejercicio 05' , mensaje_final_concatenado)
 
         
     
