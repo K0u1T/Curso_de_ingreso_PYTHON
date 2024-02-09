@@ -38,7 +38,7 @@ class App(customtkinter.CTk):
 
         resultado_importe = ((importe * 20) / 100 )
 
-        alert(None , f"Importe con descuento es del: " , resultado_importe)
+        alert(f"Importe con descuento es del: " , resultado_importe + importe)
 
 
 if __name__ == "__main__":
