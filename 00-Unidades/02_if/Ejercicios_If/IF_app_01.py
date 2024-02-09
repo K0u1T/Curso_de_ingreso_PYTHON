@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Martin
+apellido: Alvarez
 ---
 Ejercicio: if_01
 ---
@@ -33,6 +33,43 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        edad_str = self.txt_edad.get()
+        edad_num = int(edad_str)
+
+        if(edad_num == 18):
+            alert("tittle" , f"Usted tiene 18 años")
+
+
+        # == != > < >= <=
+        #si se cumple
+        
+        #if(edad > 17): 
+         #bloque verdadero   
+           # print("solo para mayores")
+            #print("dentro if")
+        
+
+        #print("fuera if")
+        #mi_variable = "Hola" #el igual es operador de asignación, asigna lo de la izquierda a lo de la derecha
+        
+        #operando_der = 1
+        #operando_izq = 11
+        #2 == 1 ???? -> False
+        #resultado = operando_izq == operando_der #esta comparacion nos desvuelve un resultado booleano, el cual es representado por True o False
+        
+        
+        #resultado = operando_izq == 2 #comparo contra un literal 
+        #resultado = operando_izq == "1" #es un str
+        #print(resultado)
+        #print(type(resultado))
+
+        #resultado = operando_izq != 1
+        #resultado = operando_izq !="11"
+        
+        #resultado = operando_izq > 11 false
+        #resultado = operando_iz >= 11 true
+        #resultado = operando_izq <= 11 true
+        #print(resultado)
         pass
 
          
