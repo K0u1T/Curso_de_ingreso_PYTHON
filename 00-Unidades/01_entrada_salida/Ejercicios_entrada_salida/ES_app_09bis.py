@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Martin
+apellido: Alvarez
 ---
 Ejercicio: entrada_salida_09bis
 ---
@@ -45,7 +45,7 @@ class App(customtkinter.CTk):
         
         alert(f"Su importe con incremento es: " , resultado_incremento )
 #{dato:.2f}
-        
+        #mensaje = f"El valor a incrementar es {sueldo_ingresado}
     
 if __name__ == "__main__":
     app = App()

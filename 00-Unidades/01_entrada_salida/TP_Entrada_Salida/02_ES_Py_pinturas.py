@@ -5,20 +5,20 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Martin
+apellido: Alvarez
 ---
 TP: ES_Pinturas
 ---
 Enunciado:
 
 2.	Para el departamento de Pinturas:
-	A.	Al ingresar una temperatura en Fahrenheit debemos mostrar la temperatura en Centígrados con un mensaje concatenado 
-        (0 °F − 32) × 5/9 = -17,78 °C
-
-    B.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en Fahrenheit 
+	
+    A.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en Fahrenheit 
         (0 °C × 9/5) + 32 = 32 °F
-
+    
+    B.	Al ingresar una temperatura en Fahrenheit debemos mostrar la temperatura en Centígrados con un mensaje concatenado 
+        (0 °F − 32) × 5/9 = -17,78 °C
 '''
 
 class App(customtkinter.CTk):
