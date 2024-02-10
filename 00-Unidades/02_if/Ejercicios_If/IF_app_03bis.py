@@ -37,9 +37,10 @@ class App(customtkinter.CTk):
         altura_num = float(altura_str)
 
         if(altura_num > 1.80): 
-            alert(f"PIVOT")
+            alert(f"PIVOT") 
         else:
-            alert("tittle" , f"NO es PIVOT")
+        #bolque false
+            alert("Jugador" , f"NO es PIVOT")
 
 
 if __name__ == "__main__":

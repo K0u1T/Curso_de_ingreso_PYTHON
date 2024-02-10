@@ -36,10 +36,28 @@ class App(customtkinter.CTk):
         edad_str = self.txt_edad.get()
         edad_num = int(edad_str)
 
-        if(edad_num >= 13 and edad_num <=17):
+        if(edad_num  > 18 or edad_num < 13 ):
             alert("tittle" , "No es ADOLESCENTE")
 
-        
+    # TABLA DE VERDAD #
+
+# OR	*********************
+# Cond1	Cond2	Resultado
+# TRUE	TRUE	TRUE
+# FALSE	TRUE	TRUE
+# TRUE	FALSE	TRUE
+# FALSE	FALSE	FALSE
+
+# AND ***********************
+# Cond1	C#ond2	Resultado
+# TRUE	TRUE	TRUE
+# FALSE	TRUE	FALSE
+# TRUE	FALSE	FALSE
+# FALSE	FALSE	FALSE
+# NOT ********************
+# Cond1		Resultado
+# TRUE		FALSE
+# FALSE		TRUE
         
     
 if __name__ == "__main__":
