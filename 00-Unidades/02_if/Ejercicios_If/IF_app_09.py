@@ -4,6 +4,9 @@ from tkinter.messagebox import askyesno as question
 from tkinter.simpledialog import askstring as prompt
 import customtkinter
 import random
+#para random importar "funcion" y añadir el nombre a lo que llamemos
+#from random import randint as numeroAleatorio
+
 
 '''
 nombre: Martin
