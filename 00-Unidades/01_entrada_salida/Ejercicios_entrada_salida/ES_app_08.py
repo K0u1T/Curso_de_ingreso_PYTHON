@@ -46,11 +46,11 @@ class App(customtkinter.CTk):
         primer_numero = int(self.txt_operador_a.get())
         segundo_numero = int(self.txt_operador_b.get())
 
-        operacion_division = primer_numero // segundo_numero
+        operacion = primer_numero // segundo_numero
         resto_operacion = primer_numero % segundo_numero
 
 
-        alert(None , f"El resto de la division entre {operacion_division} es: " , resto_operacion)
+        alert("El resto de la division es: " , resto_operacion)
         
         #operador modulo o resto -> %
         #resto = 4 % 2
