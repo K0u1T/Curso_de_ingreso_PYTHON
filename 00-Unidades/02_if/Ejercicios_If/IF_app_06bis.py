@@ -41,20 +41,19 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         altura_str = self.txt_altura.get()
         altura_num = int(altura_str)
-        mensaje = "Base"
-
+        
         if(altura_num > 159 and altura_num < 180):
-            alert("tittle" , "Escolta")
+            posicion = "Escolta"
         else:
-            if(altura_num > 180 and altura_num < 199):
-                alert("tittle" , "Alero")
+            if(altura_num > 179 and altura_num < 200):
+                posicion = "Alero"
             else:
                 if(altura_num >=200):
-                    alert("tittle" , "Ala-Pivot o Pivot")
+                    posicion = "Ala-Pivot o Pivot"
                 else:
-                    mensaje = "Base"
+                    posicion = "Base"
                     
-        alert("tittle" , mensaje)
+        alert("tittle" , posicion)
 
             
         

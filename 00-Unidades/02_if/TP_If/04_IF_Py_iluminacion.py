@@ -28,7 +28,7 @@ class App(customtkinter.CTk):
 
         self.label1 = customtkinter.CTkLabel(master=self, text="Marca")
         self.label1.grid(row=0, column=0, padx=10, pady=10)
-        
+    
         self.combobox_marca = customtkinter.CTkComboBox(master=self, values=["ArgentinaLuz", "FelipeLamparas","JeLuz","HazIluminacion","Osram"])
         self.combobox_marca.grid(row=0, column=1, padx=10, pady=10)
 
@@ -43,7 +43,70 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
-        pass
+        precio_ingresado = 800
+
+        descuento = 0 
+
+        marca_ingresada = self.combobox_marca.get()
+
+        cantidad_ingresada= self.combobox_cantidad.get()
+        cantidad_ingresada = int(cantidad_ingresada)
+
+        if(cantidad_ingresada >= 6):
+    
+            descuento = 0.50
+    
+        else:
+    
+         if(cantidad_ingresada == 5):
+        
+            if(marca_ingresada == "ArgentinaLuz"):
+            
+                descuento = 0.60
+            
+            else:
+            
+                descuento = 0.70
+         else:
+        
+            if(cantidad_ingresada == 4):
+            
+                if(marca_ingresada == "ArgentinaLuz" or marca_ingresada == "FelipeLamparas"):
+                 
+                    descuento = 0.75
+                
+                else:
+                
+                    descuento = 0.80
+            
+            else:
+            
+                if(cantidad_ingresada == 3):
+                
+                    if(marca_ingresada == "ArgentinaLuz"):
+                    
+                        descuento = 0.85
+                    
+                    else:
+                    
+                        if(marca_ingresada == "FelipeLamparas"):
+                        
+                            descuento = 0.90
+                        
+                        else:
+                        
+                            descuento = 0.95
+                        
+    
+        sub_total = precio_ingresado * cantidad_ingresada
+        precio_final = sub_total * descuento
+
+        if(precio_final > 4000):
+
+            descuento =  precio_final * 0.05
+            precio_final = precio_final - descuento
+
+        alert("Su precio final es de: " , precio_final)
         
     
 if __name__ == "__main__":

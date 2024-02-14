@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Martin
+apellido: Alvarez
 ---
 Ejercicio: if_04
 ---
@@ -34,13 +34,70 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        edad_str = self.txt_edad.get()
-        edad_num = int(edad_str)
+        edad = self.txt_edad.get()
+        edad_num = int(edad)
 
         if(edad_num > 12):
 
             if(edad_num < 18):
-                alert("tittle" , "Es ADOLESCENTE")
+               alert("tittle" , "Es ADOLESCENTE")
+
+
+
+        # edad = self.txt_edad.get()
+        # edad = int(edad)
+        # nombre = prompt = ("ingrese" , "su nombre es: ")
+               
+
+        # if(edad > 17):
+              #estado = "mayor"
+
+        # elif(edad > 12):
+               #estado = "adolescente"
+
+        # else:
+               #estado = "niño"
+
+
+        # alert("su edad" , estado)  
+
+
+        # if nombre maria
+               #if
+
+
+
+
+        # if (nombre == "María and edad > 17"):
+               #if (edad) > 17
+                    #estado = "Mayor"
+        # elif (nombre != "Maria" and edad> 17)
+               #estado = "Maria no es mayor"
+        # elif (nombre == "maria" and edad > 12)
+
+        ## No hacer if innecesarios (if son como preguntas de SI tiene) porque satura el procesador ##
+       
+
+          
+        # else:
+            # alert("su dad" , "no tiene 18")
+                    
+        
+
+       ## REPASO ENTRADA Y SALIDA ## 
+    # salida
+    # alert("sabados" , "bienvenidos")
+
+    # self.txt_edad.delete(0 , 200)
+    # self.txt_edad.insert(0 , "Hola")
+    
+    # entrada
+    # nombre = prompt("su nombre" , "Ingrese su nombre")
+    # edad = self.txt_edad.get()
+
+    # castear
+    # edad_texto = self.txt_edad.get()
+    # edad_num = int(edad_texto)
 
 
 if __name__ == "__main__":
