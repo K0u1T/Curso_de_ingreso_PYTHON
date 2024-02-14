@@ -36,14 +36,13 @@ class App(customtkinter.CTk):
         nota_def = (random.randint(1, 10))
 
         if(nota_def >= 6):
-            calificacion = "Promoción directa, la nota es: "  
+            alert("Promoción directa, la nota es: " , nota_def) 
         else:
             if(nota_def < 6 and 3 > nota_def):
-                calificacion = "Aprobado, la nota es: " 
+                alert("Aprobado, la nota es: " , nota_def)
             else:
-                calificacion = "Desaprobado, la nota es: " 
+                alert("Desaprobado, la nota es: " , nota_def)
 
-        alert("", "Su calificacion es: {calificacion}" , nota_def)
             
 
 if __name__ == "__main__":
