@@ -34,7 +34,16 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+
+        destino_ingresado = self.combobox_destino.get()
+
+        match destino_ingresado:
+            case "Bariloche" | "Ushuaia":
+                mensaje = "Hace FRÍO la mayoría de las estaciones"
+            case "Cataratas" | "Mar del plata":
+                mensaje = "Hace CALOR la mayoría de las estaciones"
+        
+        alert("UTN" , mensaje)
     
     
 if __name__ == "__main__":
