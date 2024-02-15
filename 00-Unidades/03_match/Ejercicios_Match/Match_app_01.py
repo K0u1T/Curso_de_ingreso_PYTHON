@@ -45,7 +45,7 @@ class App(customtkinter.CTk):
     def btn_informar_on_click(self):
 
         mes_seleccionado = self.combobox_mes.get()
-        mensaje = "No se seleccionaron meses validos"
+        
         match mes_seleccionado:
             case "Enero":
                 mensaje = "que comiences bien el año!!!"
@@ -55,9 +55,11 @@ class App(customtkinter.CTk):
                 mensaje = "Se vienen las vacaciones"
             case "Diciembre":
                 mensaje = "Felices Fiesta!!!"
+            case _: 
+                mensaje = "No se seleccionaron meses"
 
         alert("UTN" , mensaje)
-
+# | es un OR
 
         #mes_seleccionado = self.combobox_mes.get
         #mensaje = ""
