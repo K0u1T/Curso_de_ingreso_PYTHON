@@ -57,38 +57,37 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        precio_base = 15000
+        estacion = self.combobox_estaciones.get()
+        destino = self.combobox_destino.get()
+        estadia = 15000
 
-        destinos_ingresado = self.combobox_destino.get()
-        estacion_ingresada = self.combobox_estaciones.get()
-
-        match estacion_ingresada:
-            case "Invierno":
-                match destinos_ingresado:
-                    case "Bariloche":
-                        precio_final = precio_base * 20
-                    case "Cordoba" | "Cataratas":
-                        precio_final = precio_base * 0.9
-                    case "Mar del Plata":
-                        precio_final = precio_base * 0.8
-
-        match estacion_ingresada:
-            case "Verano":
-                match destinos_ingresado:
-                    case "Bariloche":
-                        precio_final = precio_base * 0.8
-                    case "Cordoba" | "Cataratas":
-                        precio_final = precio_base * 1.2
-                    case "Mar del Plata":
-                        precio_final = precio_base * 1.1
         
-        match estacion_ingresada:
-            case _:
-                match destinos_ingresado:
-                    case "Bariloche" | "Mar del plata" | "Cataratas":
-                        precio_final = precio_base * 1.1
+        match(estacion):
+            case "Invierno":
+                match(destino):
+                    case "Bariloche":
+                        porcentaje = 20 # incremento
+                    case "Mar del plata":
+                        porcentaje = -20 # descuento
                     case _:
-                        precio_final = precio_base
+                        porcentaje = -10 # descuento
+            case "Verano":
+                match(destino):
+                    case "Bariloche":
+                        porcentaje = -20 # descuento
+                    case "Mar del plata":
+                        porcentaje = 20 #incremento
+                    case _:
+                        porcentaje = 10 #incremento
+            case _:
+                match(destino):
+                    case "Cordoba":
+                        porcentaje = 0
+                    case _:
+                        porcentaje = 10 # incremento
+            
+        importe_porcentaje = estadia * porcentaje / 100
+        precio_final = estadia + importe_porcentaje
 
         alert("Su precio final es: " , precio_final)
     
