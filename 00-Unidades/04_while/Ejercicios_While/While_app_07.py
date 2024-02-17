@@ -36,7 +36,13 @@ class App(customtkinter.CTk):
 
 
     def btn_comenzar_ingreso_on_click(self):
-        pass
+        while(True):
+            numero = prompt("ingreso" , "ingrese un numero o cancelar para terminar")
+
+            if(numero == None):
+                break
+            
+            numero = int(numero)
 
     
 if __name__ == "__main__":
